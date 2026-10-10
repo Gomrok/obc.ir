@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-body);
+  --font-mono: "Inter", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-teal-50: #eef8fc;
+  --color-teal-100: #d7eff8;
+  --color-teal-200: #afe0f1;
+  --color-teal-300: #79cbe7;
+  --color-teal-400: #3cb0d9;
+  --color-teal-500: #199ccf;
+  --color-teal-600: #167fa8;
+  --color-teal-700: #0f30bb;
+  --color-teal-800: #102b94;
+  --color-teal-900: #111f62;
+  --color-teal-950: #0d173d;
+
+  --color-cyan-400: #3cb0d9;
+  --color-cyan-500: #199ccf;
+  --color-cyan-600: #167fa8;
+
+  --color-slate-50: #fffaf1;
+  --color-slate-100: #f6efe3;
+  --color-slate-200: #e8dfd1;
+  --color-slate-300: #cabfaa;
+  --color-slate-400: #938877;
+  --color-slate-500: #706657;
+  --color-slate-600: #554b3d;
+  --color-slate-700: #3e3426;
+  --color-slate-800: #281f14;
+  --color-slate-900: #140e04;
+  --color-slate-950: #0d0903;
+}
+
+:root {
+  --color-text: #140e04;
+  --color-background: #fffaf1;
+  --color-primary: #199ccf;
+  --color-secondary: #0f30bb;
+  --color-accent: #bb9112;
+  --color-white: #ffffff;
+  --color-cream-strong: #f6efe3;
+  --color-cream-soft: #fffdf9;
+  --color-primary-soft: #eef8fc;
+  --color-primary-line: #afe0f1;
+  --color-secondary-dark: #0d173d;
+  --color-secondary-deep: #111f62;
+  --color-text-muted: #706657;
+  --color-border: #e8dfd1;
+
+  --font-rtl: "Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-ltr: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: var(--font-rtl);
+
+  --container-width: 1240px;
+  --container-gutter: clamp(20px, 4vw, 64px);
+  --section-space: clamp(88px, 10vw, 160px);
+  --section-space-compact: clamp(64px, 8vw, 120px);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 42px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 24px 70px rgb(20 14 4 / 8%);
+  --shadow-card: 0 18px 45px rgb(20 14 4 / 7%);
+  --shadow-lift: 0 28px 70px rgb(15 48 187 / 14%);
+
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 180ms var(--ease-standard);
+  --transition-base: 420ms var(--ease-standard);
+  --transition-slow: 760ms var(--ease-emphasized);
+
+  --z-base: 1;
+  --z-sticky: 30;
+  --z-header: 50;
+  --z-menu: 45;
+  --z-modal: 80;
+}
+
+html[data-language="en"] {
+  --font-body: var(--font-ltr);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+@layer base {
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    color: inherit;
+  }
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-strong);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--color-cream-strong);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-text) 48%, var(--color-background));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-gutter: 20px;
+    --section-space: 80px;
+    --section-space-compact: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "OBC Investment Portal",
+  "description": "پلتفرم جامع سرمایه‌گذاری بین‌المللی، توسعه تجارت، پروژه‌های منتخب و خدمات مشاوره با رابط کاربری مدرن",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
