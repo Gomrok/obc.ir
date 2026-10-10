@@ -1,4 +1,5 @@
 import type { Language } from '../../types';
+import { translations } from '../../i18n/translations';
 import type { HomeContent } from './homeContent';
 import { CountUp, Reveal } from './HomePrimitives';
 
@@ -9,7 +10,7 @@ interface InvestmentMetricsProps {
 
 export default function InvestmentMetrics({ items, lang }: InvestmentMetricsProps) {
   return (
-    <section className="obc-metrics" aria-label="Investment metrics">
+    <section className="obc-metrics" aria-label={translations[lang].investmentMetrics}>
       <div className="obc-container">
         <Reveal className="obc-metrics__panel">
           {items.map((item, index) => (

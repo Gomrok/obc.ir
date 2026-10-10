@@ -13,6 +13,10 @@ export interface UiTranslations {
   navRegions: string;
   navKnowledge: string;
   navContact: string;
+  primaryNavigation: string;
+  mobileNavigation: string;
+  language: string;
+  openMenu: string;
 
   // Common buttons & actions
   viewDetails: string;
@@ -30,6 +34,7 @@ export interface UiTranslations {
   all: string;
   share: string;
   backToHome: string;
+  investmentMetrics: string;
 
   // Key stats
   statSatisfactionRate: string;
@@ -132,6 +137,7 @@ export interface UiTranslations {
 
   // Footer & Modals
   footerCtaTitle: string;
+  footerCtaEyebrow: string;
   footerCtaDesc: string;
   footerDesc: string;
   quickAccess: string;
@@ -162,7 +168,7 @@ export interface UiTranslations {
 export const translations: Record<Language, UiTranslations> = {
   FA: {
     brandName: 'OBC',
-    brandTagline: 'INVEST • CONNECT • GROW',
+    brandTagline: 'سرمایه‌گذاری • ارتباط • رشد',
     navHome: 'خانه',
     navAbout: 'درباره ما',
     navOpportunities: 'فرصت‌های سرمایه‌گذاری',
@@ -170,6 +176,10 @@ export const translations: Record<Language, UiTranslations> = {
     navRegions: 'مناطق هدف',
     navKnowledge: 'دانش و بینش',
     navContact: 'تماس با ما',
+    primaryNavigation: 'ناوبری اصلی',
+    mobileNavigation: 'ناوبری موبایل',
+    language: 'زبان',
+    openMenu: 'باز کردن منو',
     viewDetails: 'مشاهده جزئیات',
     exploreMore: 'مشاهده بیشتر',
     viewAll: 'مشاهده همه',
@@ -185,6 +195,7 @@ export const translations: Record<Language, UiTranslations> = {
     all: 'همه',
     share: 'اشتراک‌گذاری',
     backToHome: 'بازگشت به خانه',
+    investmentMetrics: 'شاخص‌های سرمایه‌گذاری',
 
     statSatisfactionRate: 'نرخ رضایت مشتریان',
     statCountriesCovered: 'کشور تحت پوشش',
@@ -279,13 +290,14 @@ export const translations: Record<Language, UiTranslations> = {
     authorsSubtitle: 'دیدگاه‌های معتبر از نخبگان و اساتید اقتصادی',
 
     footerCtaTitle: 'بیایید با هم آینده‌ای بهتر بسازیم',
+    footerCtaEyebrow: 'OBC / دسترسی به سرمایه‌گذاری',
     footerCtaDesc: 'برای آشنایی بیشتر با OBC، ساختاردهی معاملات و فرصت‌های همکاری، با کارشناسان ما در ارتباط باشید.',
     footerDesc: 'پلتفرم سرمایه‌گذاری بین‌المللی؛ پل ارتباطی میان سرمایه‌گذاران، شرکت‌ها و بازارهای نوظهور جهان.',
     quickAccess: 'دسترسی سریع',
     contactInfo: 'اطلاعات تماس',
     addressText: 'تهران، خیابان ولیعصر، برج تجارت جهانی، طبقه ۱۰',
     dubaiOffice: 'دفتر منطقه‌ای دبی: خیابان شیخ زاید، برج امارات، طبقه ۱۴',
-    copyright: '© ۲۰۲۴ OBC Investment Platform. تمامی حقوق محفوظ است.',
+    copyright: '© ۲۰۲۴ پلتفرم سرمایه‌گذاری OBC. تمامی حقوق محفوظ است.',
     privacyPolicy: 'حفظ حریم خصوصی',
     termsConditions: 'قوانین و مقررات',
 
@@ -307,7 +319,7 @@ export const translations: Record<Language, UiTranslations> = {
 
   AR: {
     brandName: 'OBC',
-    brandTagline: 'INVEST • CONNECT • GROW',
+    brandTagline: 'استثمار • تواصل • نمو',
     navHome: 'الرئيسية',
     navAbout: 'من نحن',
     navOpportunities: 'فرص الاستثمار',
@@ -315,6 +327,10 @@ export const translations: Record<Language, UiTranslations> = {
     navRegions: 'المناطق المستهدفة',
     navKnowledge: 'المعرفة والرؤى',
     navContact: 'اتصل بنا',
+    primaryNavigation: 'التنقل الرئيسي',
+    mobileNavigation: 'تنقل الهاتف المحمول',
+    language: 'اللغة',
+    openMenu: 'فتح القائمة',
     viewDetails: 'عرض التفاصيل',
     exploreMore: 'استكشف المزيد',
     viewAll: 'عرض الكل',
@@ -330,6 +346,7 @@ export const translations: Record<Language, UiTranslations> = {
     all: 'الكل',
     share: 'مشاركة',
     backToHome: 'العودة للرئيسية',
+    investmentMetrics: 'مؤشرات الاستثمار',
 
     statSatisfactionRate: 'معدل رضا العملاء',
     statCountriesCovered: 'دولة مشمولة بالشبكة',
@@ -424,13 +441,14 @@ export const translations: Record<Language, UiTranslations> = {
     authorsSubtitle: 'رؤى موثوقة من نخبة المحللين والأساتذة الاقتصاديين',
 
     footerCtaTitle: 'دعونا نبني معاً مستقبلاً أكثر ازدهاراً',
+    footerCtaEyebrow: 'OBC / الوصول إلى الاستثمار',
     footerCtaDesc: 'تواصل مع كبار مستشارينا لبحث فرص التعاون وهيكلة الصفقات الاستثمارية.',
     footerDesc: 'منصة استثمار دولية؛ جسر يربط المستثمرين والشركات بالأسواق الواعدة عالمياً.',
     quickAccess: 'روابط سريعة',
     contactInfo: 'معلومات الاتصال',
     addressText: 'طهران، شارع ولي عصر، برج التجارة العالمي، الطابق 10',
     dubaiOffice: 'المكتب الإقليمي في دبي: شارع الشيخ زايد، برج الإمارات، الطابق 14',
-    copyright: '© 2024 OBC Investment Platform. جميع الحقوق محفوظة.',
+    copyright: '© 2024 منصة OBC الاستثمارية. جميع الحقوق محفوظة.',
     privacyPolicy: 'سياسة الخصوصية',
     termsConditions: 'الشروط والأحكام',
 
@@ -460,6 +478,10 @@ export const translations: Record<Language, UiTranslations> = {
     navRegions: 'Target Regions',
     navKnowledge: 'Knowledge & Insights',
     navContact: 'Contact Us',
+    primaryNavigation: 'Primary navigation',
+    mobileNavigation: 'Mobile navigation',
+    language: 'Language',
+    openMenu: 'Open menu',
     viewDetails: 'View Details',
     exploreMore: 'Explore More',
     viewAll: 'View All',
@@ -475,6 +497,7 @@ export const translations: Record<Language, UiTranslations> = {
     all: 'All',
     share: 'Share',
     backToHome: 'Back to Home',
+    investmentMetrics: 'Investment metrics',
 
     statSatisfactionRate: 'Client Satisfaction',
     statCountriesCovered: 'Countries Covered',
@@ -569,6 +592,7 @@ export const translations: Record<Language, UiTranslations> = {
     authorsSubtitle: 'Unbiased intelligence from leading industry economists and sector heads',
 
     footerCtaTitle: 'Let’s Build a Sustainable Future Together',
+    footerCtaEyebrow: 'OBC / INVESTMENT ACCESS',
     footerCtaDesc: 'Connect with our senior partners to explore deal structuring, capital deployment, and strategic partnerships.',
     footerDesc: 'Global investment platform bridging capital, industry, and emerging markets worldwide.',
     quickAccess: 'Quick Links',

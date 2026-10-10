@@ -38,14 +38,34 @@ import {
   faqListEN 
 } from './i18n/data_en';
 
-export const partnerLogos = [
+const partnerLogosFA = [
+  { name: 'IFC', subtitle: 'شرکت مالی بین‌المللی • گروه بانک جهانی' },
+  { name: 'ADB', subtitle: 'بانک توسعه آسیایی' },
+  { name: 'بانک اروپایی', subtitle: 'EBRD • بانک اروپایی بازسازی و توسعه' },
+  { name: 'JICA', subtitle: 'آژانس همکاری بین‌المللی ژاپن' },
+  { name: 'Proparco', subtitle: 'گروه AFD' },
+  { name: 'IsDB', subtitle: 'بانک توسعه اسلامی' },
+];
+
+const partnerLogosAR = [
+  { name: 'IFC', subtitle: 'مؤسسة التمويل الدولية • مجموعة البنك الدولي' },
+  { name: 'ADB', subtitle: 'بنك التنمية الآسيوي' },
+  { name: 'البنك الأوروبي', subtitle: 'EBRD • البنك الأوروبي لإعادة الإعمار والتنمية' },
+  { name: 'JICA', subtitle: 'الوكالة اليابانية للتعاون الدولي' },
+  { name: 'Proparco', subtitle: 'مجموعة AFD' },
+  { name: 'IsDB', subtitle: 'البنك الإسلامي للتنمية' },
+];
+
+const partnerLogosEN = [
   { name: 'IFC', subtitle: 'International Finance Corporation • World Bank Group' },
   { name: 'ADB', subtitle: 'ASIAN DEVELOPMENT BANK' },
   { name: 'European Bank', subtitle: 'EBRD • European Bank for Reconstruction' },
   { name: 'JICA', subtitle: 'Japan International Cooperation Agency' },
   { name: 'Proparco', subtitle: 'GROUPE AFD' },
-  { name: 'IsDB', subtitle: 'Islamic Development Bank • البنك الإسلامي للتنمية' }
+  { name: 'IsDB', subtitle: 'Islamic Development Bank' },
 ];
+
+export const partnerLogos = partnerLogosEN;
 
 export function getLocalizedData(lang: Language) {
   if (lang === 'AR') {
@@ -59,7 +79,7 @@ export function getLocalizedData(lang: Language) {
       knowledgeAuthors: knowledgeAuthorsAR,
       growthMilestones: growthMilestonesAR,
       faqList: faqListAR,
-      partnerLogos
+      partnerLogos: partnerLogosAR,
     };
   }
   if (lang === 'EN') {
@@ -73,7 +93,7 @@ export function getLocalizedData(lang: Language) {
       knowledgeAuthors: knowledgeAuthorsEN,
       growthMilestones: growthMilestonesEN,
       faqList: faqListEN,
-      partnerLogos
+      partnerLogos: partnerLogosEN,
     };
   }
   return {
@@ -86,7 +106,7 @@ export function getLocalizedData(lang: Language) {
     knowledgeAuthors: knowledgeAuthorsFA,
     growthMilestones: growthMilestonesFA,
     faqList: faqListFA,
-    partnerLogos
+    partnerLogos: partnerLogosFA,
   };
 }
 

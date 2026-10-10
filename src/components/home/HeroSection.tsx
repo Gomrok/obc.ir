@@ -132,7 +132,7 @@ export default function HeroSection({ content, isRtl, onExplore, onSubmitProject
       </div>
 
       <div className="obc-hero__scroll-cue" aria-hidden="true">
-        <span>SCROLL</span>
+        <span>{content.scrollLabel}</span>
         <ArrowDown />
       </div>
     </section>

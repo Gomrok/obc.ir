@@ -58,6 +58,7 @@ export interface HomeContent {
     secondaryAction: string;
     visualLabel: string;
     visualNote: string;
+    scrollLabel: string;
   };
   metrics: HomeMetric[];
   trustChain: {
@@ -170,7 +171,7 @@ const commonSectorIcons: IconKey[] = [
 export const homeContent: Record<Language, HomeContent> = {
   FA: {
     hero: {
-      eyebrow: 'GLOBAL INVESTMENT ACCESS',
+      eyebrow: 'دسترسی جهانی به سرمایه‌گذاری',
       title: 'سرمایه، پروژه و فرصت را در یک نقطه به هم متصل می‌کنیم',
       description:
         'OBC بستری برای شناسایی فرصت‌های سرمایه‌گذاری، ارتباط سرمایه‌گذاران بین‌المللی با پروژه‌های معتبر و تسهیل مسیر سرمایه‌گذاری فرامرزی است.',
@@ -178,6 +179,7 @@ export const homeContent: Record<Language, HomeContent> = {
       secondaryAction: 'ثبت پروژه',
       visualLabel: 'شبکه سرمایه‌گذاری OBC',
       visualNote: 'اتصال بازارها، سرمایه و پروژه‌های آماده',
+      scrollLabel: 'پیمایش',
     },
     metrics: [
       { value: 6, label: 'فرصت منتخب فعال' },
@@ -186,7 +188,7 @@ export const homeContent: Record<Language, HomeContent> = {
       { value: 6, label: 'نهاد در شبکه فعلی' },
     ],
     trustChain: {
-      eyebrow: 'INVESTMENT TRUST CHAIN',
+      eyebrow: 'زنجیره اعتماد سرمایه‌گذاری',
       title: 'زنجیره اعتماد سرمایه‌گذاری',
       description:
         'هر فرصت از یک مسیر شفاف و کنترل‌شده عبور می‌کند تا ریسک تصمیم‌گیری کاهش یابد و سرمایه با پروژه مناسب پیوند بخورد.',
@@ -203,7 +205,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     opportunities: {
-      eyebrow: 'CURATED OPPORTUNITIES',
+      eyebrow: 'فرصت‌های منتخب',
       title: 'فرصت‌هایی که ارزش بررسی دارند',
       description: 'پروژه‌های منتخب با داده‌های ساختاریافته، مرحله مشخص و چارچوب اولیه ارزیابی.',
       viewAll: 'مشاهده همه فرصت‌ها',
@@ -217,11 +219,11 @@ export const homeContent: Record<Language, HomeContent> = {
       status: 'وضعیت',
     },
     journey: {
-      eyebrow: 'FROM PROJECT TO MARKET',
+      eyebrow: 'از پروژه تا بازار',
       title: 'مسیر تبدیل یک پروژه به فرصت سرمایه‌گذاری بین‌المللی',
       description:
         'یک فرآیند مرحله‌ای برای آماده‌سازی، ساختاردهی و معرفی پروژه به شبکه سرمایه‌گذاران هدف.',
-      visualKicker: 'Investment readiness',
+      visualKicker: 'آمادگی سرمایه‌پذیری',
       steps: [
         { title: 'ثبت پروژه', description: 'اطلاعات پایه، نیاز سرمایه و اهداف توسعه در یک پرونده منسجم ثبت می‌شود.' },
         { title: 'ارزیابی', description: 'تیم OBC کیفیت داده، منطق اقتصادی و موانع کلیدی را بررسی می‌کند.' },
@@ -233,18 +235,18 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     audiences: {
-      eyebrow: 'TWO CLEAR PATHS',
+      eyebrow: 'دو مسیر روشن',
       title: 'یک شبکه، دو مسیر تخصصی',
       description: 'تجربه OBC برای نیازهای متفاوت سرمایه‌گذار و صاحب پروژه به‌صورت مستقل طراحی شده است.',
       investor: {
-        eyebrow: 'FOR INVESTORS',
+        eyebrow: 'برای سرمایه‌گذاران',
         title: 'فرصت مناسب را با اطمینان بیشتر پیدا کنید',
         description: 'دسترسی به پروژه‌های غربال‌شده، داده‌های قابل مقایسه و همراهی در کل چرخه تصمیم‌گیری.',
         action: 'ورود به مسیر سرمایه‌گذار',
         steps: ['کشف فرصت‌ها', 'مقایسه پروژه‌ها', 'درخواست اطلاعات', 'گفت‌وگو با OBC', 'سرمایه‌گذاری'],
       },
       projectOwner: {
-        eyebrow: 'FOR PROJECT OWNERS',
+        eyebrow: 'برای صاحبان پروژه',
         title: 'پروژه خود را برای سرمایه بین‌المللی آماده کنید',
         description: 'از ارزیابی آمادگی تا ساختاردهی و معرفی هدفمند به شبکه سرمایه‌گذاران خارجی.',
         action: 'ثبت و ارزیابی پروژه',
@@ -252,7 +254,7 @@ export const homeContent: Record<Language, HomeContent> = {
       },
     },
     sectors: {
-      eyebrow: 'SECTOR EXPLORER',
+      eyebrow: 'کاوش حوزه‌ها',
       title: 'حوزه‌های سرمایه‌گذاری',
       description: 'فرصت‌ها را بر اساس حوزه تخصصی، منطق بازار و ظرفیت رشد بررسی کنید.',
       opportunityLabel: 'فرصت فعال',
@@ -269,7 +271,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     network: {
-      eyebrow: 'GLOBAL INVESTMENT NETWORK',
+      eyebrow: 'شبکه جهانی سرمایه‌گذاری',
       title: 'دسترسی محلی، نگاه بین‌المللی',
       description: 'شبکه منطقه‌ای OBC پروژه‌ها را به بازارها، نهادها و سرمایه‌گذاران مناسب متصل می‌کند.',
       projectsLabel: 'پروژه فعال',
@@ -277,7 +279,7 @@ export const homeContent: Record<Language, HomeContent> = {
       activeMarketsLabel: 'بازار هدف فعال',
     },
     why: {
-      eyebrow: 'WHY OBC',
+      eyebrow: 'چرا OBC',
       title: 'زیرساخت تصمیم‌گیری حرفه‌ای برای سرمایه‌گذاری فرامرزی',
       description: 'ترکیبی از ارزیابی مستقل، دانش بازار و همراهی اجرایی برای تصمیم‌های پیچیده سرمایه‌گذاری.',
       serviceAction: 'مشاهده جزئیات خدمت',
@@ -291,7 +293,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     process: {
-      eyebrow: 'INVESTMENT PROCESS',
+      eyebrow: 'فرآیند سرمایه‌گذاری',
       title: 'از کشف تا رشد، در شش گام روشن',
       description: 'فرآیندی شفاف که تصمیم‌گیری، مذاکره و اجرای سرمایه‌گذاری را قابل مدیریت می‌کند.',
       steps: [
@@ -304,7 +306,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     featured: {
-      eyebrow: 'FEATURED OPPORTUNITY',
+      eyebrow: 'فرصت منتخب',
       title: 'فرصت منتخب این دوره',
       description: 'یک پرونده سرمایه‌گذاری با مقیاس، اطلاعات و آمادگی متمایز برای بررسی عمیق‌تر.',
       capital: 'سرمایه موردنیاز',
@@ -315,19 +317,19 @@ export const homeContent: Record<Language, HomeContent> = {
       action: 'مشاهده فرصت',
     },
     insights: {
-      eyebrow: 'REPORTS & INSIGHTS',
+      eyebrow: 'گزارش‌ها و بینش‌ها',
       title: 'تحلیل برای تصمیم‌های دقیق‌تر',
       description: 'گزارش‌های سرمایه‌گذاری، تحلیل بازار، راهنماهای ورود و تازه‌ترین دیدگاه‌های اقتصادی.',
       action: 'مشاهده همه بینش‌ها',
       readArticle: 'مطالعه گزارش',
     },
     institutions: {
-      eyebrow: 'INSTITUTIONAL TRUST',
+      eyebrow: 'اعتماد نهادی',
       title: 'شبکه‌ای برای همکاری در مقیاس بین‌المللی',
       description: 'استانداردهای حرفه‌ای، ارتباطات نهادی و تجربه بازارهای متعدد، پایه اعتماد در هر تعامل OBC است.',
     },
     finalCta: {
-      eyebrow: 'START THE NEXT MOVE',
+      eyebrow: 'گام بعدی را آغاز کنید',
       title: 'سرمایه‌گذاری بعدی شما می‌تواند از اینجا شروع شود',
       description: 'فرصت مناسب را پیدا کنید یا پروژه خود را برای دسترسی به سرمایه بین‌المللی آماده سازید.',
       primaryAction: 'مشاهده فرصت‌ها',
@@ -336,7 +338,7 @@ export const homeContent: Record<Language, HomeContent> = {
   },
   AR: {
     hero: {
-      eyebrow: 'GLOBAL INVESTMENT ACCESS',
+      eyebrow: 'الوصول العالمي إلى الاستثمار',
       title: 'نربط رأس المال والمشاريع والفرص في نقطة واحدة',
       description:
         'توفر OBC منصة لاكتشاف فرص الاستثمار، وربط المستثمرين الدوليين بالمشاريع الموثوقة، وتيسير مسار الاستثمار العابر للحدود.',
@@ -344,6 +346,7 @@ export const homeContent: Record<Language, HomeContent> = {
       secondaryAction: 'قدّم مشروعك',
       visualLabel: 'شبكة OBC الاستثمارية',
       visualNote: 'ربط الأسواق ورأس المال والمشاريع الجاهزة',
+      scrollLabel: 'مرّر للأسفل',
     },
     metrics: [
       { value: 6, label: 'فرص مختارة نشطة' },
@@ -352,7 +355,7 @@ export const homeContent: Record<Language, HomeContent> = {
       { value: 6, label: 'مؤسسات في الشبكة الحالية' },
     ],
     trustChain: {
-      eyebrow: 'INVESTMENT TRUST CHAIN',
+      eyebrow: 'سلسلة الثقة الاستثمارية',
       title: 'سلسلة الثقة الاستثمارية',
       description: 'تمر كل فرصة بمسار واضح ومنضبط لتقليل مخاطر القرار وربط رأس المال بالمشروع الأنسب.',
       progressLabel: 'تقدم مسار التقييم',
@@ -368,7 +371,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     opportunities: {
-      eyebrow: 'CURATED OPPORTUNITIES',
+      eyebrow: 'الفرص المختارة',
       title: 'فرص تستحق الدراسة',
       description: 'مشاريع مختارة ببيانات منظمة ومرحلة واضحة وإطار تقييم أولي.',
       viewAll: 'عرض جميع الفرص',
@@ -382,10 +385,10 @@ export const homeContent: Record<Language, HomeContent> = {
       status: 'الحالة',
     },
     journey: {
-      eyebrow: 'FROM PROJECT TO MARKET',
+      eyebrow: 'من المشروع إلى السوق',
       title: 'تحويل المشروع إلى فرصة استثمارية دولية',
       description: 'عملية مرحلية لإعداد المشروع وهيكلته وعرضه على شبكة المستثمرين المستهدفين.',
-      visualKicker: 'Investment readiness',
+      visualKicker: 'الجاهزية الاستثمارية',
       steps: [
         { title: 'تقديم المشروع', description: 'تسجيل المعلومات الأساسية واحتياجات التمويل وأهداف النمو.' },
         { title: 'التقييم', description: 'مراجعة جودة البيانات والمنطق الاقتصادي والعوائق الرئيسية.' },
@@ -397,18 +400,18 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     audiences: {
-      eyebrow: 'TWO CLEAR PATHS',
+      eyebrow: 'مساران واضحان',
       title: 'شبكة واحدة، مساران متخصصان',
       description: 'صُممت تجربة OBC لتلبية احتياجات المستثمر وصاحب المشروع بصورة مستقلة.',
       investor: {
-        eyebrow: 'FOR INVESTORS',
+        eyebrow: 'للمستثمرين',
         title: 'اعثر على الفرصة المناسبة بثقة أكبر',
         description: 'الوصول إلى مشاريع منتقاة وبيانات قابلة للمقارنة ودعم شامل خلال دورة القرار.',
         action: 'ابدأ مسار المستثمر',
         steps: ['اكتشاف الفرص', 'مقارنة المشاريع', 'طلب المعلومات', 'التواصل مع OBC', 'الاستثمار'],
       },
       projectOwner: {
-        eyebrow: 'FOR PROJECT OWNERS',
+        eyebrow: 'لأصحاب المشاريع',
         title: 'جهّز مشروعك لرأس المال الدولي',
         description: 'من تقييم الجاهزية إلى الهيكلة والعرض الموجه على المستثمرين الأجانب.',
         action: 'قدّم مشروعك للتقييم',
@@ -416,7 +419,7 @@ export const homeContent: Record<Language, HomeContent> = {
       },
     },
     sectors: {
-      eyebrow: 'SECTOR EXPLORER',
+      eyebrow: 'استكشاف القطاعات',
       title: 'قطاعات الاستثمار',
       description: 'استكشف الفرص حسب القطاع ومنطق السوق وإمكانات النمو.',
       opportunityLabel: 'فرصة نشطة',
@@ -433,7 +436,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     network: {
-      eyebrow: 'GLOBAL INVESTMENT NETWORK',
+      eyebrow: 'شبكة الاستثمار العالمية',
       title: 'وصول محلي برؤية دولية',
       description: 'تربط شبكة OBC الإقليمية المشاريع بالأسواق والمؤسسات والمستثمرين المناسبين.',
       projectsLabel: 'مشروعاً نشطاً',
@@ -441,7 +444,7 @@ export const homeContent: Record<Language, HomeContent> = {
       activeMarketsLabel: 'أسواق مستهدفة',
     },
     why: {
-      eyebrow: 'WHY OBC',
+      eyebrow: 'لماذا OBC',
       title: 'بنية قرار احترافية للاستثمار العابر للحدود',
       description: 'مزيج من التقييم المستقل ومعرفة السوق والدعم التنفيذي للقرارات الاستثمارية المعقدة.',
       serviceAction: 'عرض تفاصيل الخدمة',
@@ -455,7 +458,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     process: {
-      eyebrow: 'INVESTMENT PROCESS',
+      eyebrow: 'عملية الاستثمار',
       title: 'من الاكتشاف إلى النمو في ست خطوات',
       description: 'عملية واضحة تجعل اتخاذ القرار والتفاوض والتنفيذ أكثر قابلية للإدارة.',
       steps: [
@@ -468,7 +471,7 @@ export const homeContent: Record<Language, HomeContent> = {
       ],
     },
     featured: {
-      eyebrow: 'FEATURED OPPORTUNITY',
+      eyebrow: 'الفرصة المميزة',
       title: 'فرصة هذا الشهر المختارة',
       description: 'ملف استثماري مميز من حيث الحجم والبيانات والجاهزية للدراسة المتعمقة.',
       capital: 'رأس المال المطلوب',
@@ -479,19 +482,19 @@ export const homeContent: Record<Language, HomeContent> = {
       action: 'عرض الفرصة',
     },
     insights: {
-      eyebrow: 'REPORTS & INSIGHTS',
+      eyebrow: 'التقارير والرؤى',
       title: 'تحليل لقرارات أكثر دقة',
       description: 'تقارير استثمارية ورؤى سوقية وأدلة دخول وأحدث التحليلات الاقتصادية.',
       action: 'عرض جميع الرؤى',
       readArticle: 'اقرأ التقرير',
     },
     institutions: {
-      eyebrow: 'INSTITUTIONAL TRUST',
+      eyebrow: 'الثقة المؤسسية',
       title: 'شبكة للتعاون على نطاق دولي',
       description: 'المعايير المهنية والعلاقات المؤسسية والخبرة متعددة الأسواق هي أساس الثقة في كل تفاعل مع OBC.',
     },
     finalCta: {
-      eyebrow: 'START THE NEXT MOVE',
+      eyebrow: 'ابدأ خطوتك التالية',
       title: 'قد يبدأ استثمارك التالي من هنا',
       description: 'اكتشف الفرصة المناسبة أو جهّز مشروعك للوصول إلى رأس المال الدولي.',
       primaryAction: 'استكشف الفرص',
@@ -508,6 +511,7 @@ export const homeContent: Record<Language, HomeContent> = {
       secondaryAction: 'Submit a project',
       visualLabel: 'OBC investment network',
       visualNote: 'Connecting markets, capital and investment-ready projects',
+      scrollLabel: 'SCROLL',
     },
     metrics: [
       { value: 6, label: 'Active curated opportunities' },

@@ -95,6 +95,7 @@ html {
   scroll-padding-top: 96px;
   background: var(--color-background);
   color: var(--color-text);
+  font-size: 106.25%;
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

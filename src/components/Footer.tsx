@@ -29,7 +29,7 @@ export default function Footer({
           <section className="obc-footer__cta" aria-labelledby="footer-cta-title">
             <div className="obc-footer__cta-mesh" aria-hidden="true" />
             <div>
-              <span className="obc-footer__cta-eyebrow">OBC / INVESTMENT ACCESS</span>
+              <span className="obc-footer__cta-eyebrow">{t.footerCtaEyebrow}</span>
               <h2 id="footer-cta-title">{t.footerCtaTitle}</h2>
               <p>{t.footerCtaDesc}</p>
             </div>

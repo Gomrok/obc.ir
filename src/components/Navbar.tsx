@@ -165,7 +165,7 @@ export default function Navbar({
             </span>
           </button>
 
-          <nav className="obc-navbar__desktop" aria-label="Primary navigation">
+          <nav className="obc-navbar__desktop" aria-label={t.primaryNavigation}>
             {navItems.map((item) => (
               <button
                 type="button"
@@ -246,11 +246,7 @@ export default function Navbar({
               aria-label={
                 isMobileMenuOpen
                   ? t.close
-                  : lang === 'FA'
-                    ? 'باز کردن منو'
-                    : lang === 'AR'
-                      ? 'فتح القائمة'
-                      : 'Open menu'
+                  : t.openMenu
               }
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation"
@@ -263,7 +259,7 @@ export default function Navbar({
 
       <div id="mobile-navigation" className="obc-mobile-nav" data-open={isMobileMenuOpen} aria-hidden={!isMobileMenuOpen}>
         <div className="obc-mobile-nav__ambient" aria-hidden="true" />
-        <nav className="obc-container obc-mobile-nav__inner" aria-label="Mobile navigation">
+        <nav className="obc-container obc-mobile-nav__inner" aria-label={t.mobileNavigation}>
           <div className="obc-mobile-nav__links">
             {navItems.map((item, index) => (
               <button
@@ -282,7 +278,7 @@ export default function Navbar({
           </div>
 
           <div className="obc-mobile-nav__footer">
-            <div className="obc-mobile-nav__languages" aria-label="Language">
+            <div className="obc-mobile-nav__languages" aria-label={t.language}>
               {languages.map((language) => (
                 <button
                   type="button"
